@@ -1,0 +1,28 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="delitem">
+		<form action="/delitems" method="POST">
+			<p>Enter the Item to be deleted:</p>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="Item ID*" name="id" required> &nbsp;&nbsp;&nbsp;&nbsp;
+			<br><br>
+			<input type="submit" name="submit" value="Submit.">
+			<p class="msg">{{message}}</p>
+			<br><br><br><br>
+			<table class="del">
+				<tr>
+					<th>Item ID</th>
+					<th>Name</th>
+					<th>Event</th> 
+					<th>Stock</th>
+					<th>Price</th>
+				</tr>
+				{{#each results}}
+				<tr><td>{{this.Item_ID}}</td>
+					<td>{{this.Name}}</td>
+					<td>{{this.Event}}</td>
+					<td>{{this.Stock}}</td>
+					<td>{{this.Price}}</td></tr>
+					{{/each}}
+				</table>
+			</div>

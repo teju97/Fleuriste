@@ -1,0 +1,17 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="cust">
+		<p class="enter">Enter the Customer details:</p>
+		<form action="/customer" method="POST">
+			<p>Returning Customer?</p><br>
+			<input type="text" placeholder="ID*" name="id"><br>
+			<br>
+			<p>New Customer:</p>
+			<input type="text" placeholder="First Name*" name="fname"><br>
+			<input type="text" placeholder="Last Name*" name="lname"><br>
+			<input type="text" placeholder="Address*" name="addr"><br>
+			<input type="text" placeholder="Phone No*" name="phone"><br>
+			<input type="submit" name="submit" value="Submit.">
+			<p class="msg">{{message}}</p>
+		</form>
+	</div>

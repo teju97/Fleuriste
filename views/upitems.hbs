@@ -1,0 +1,31 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="updeco">
+		<p class="enter">Enter the updated Item details:</p>
+		<form action="/upitems" method="POST">
+			<input type="number" placeholder="ID*" name="itemid" required> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Name*" name="itemname"> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Event*" name="event"> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="number" placeholder="Stock*" name="stock"> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="number" placeholder="Price*" name="price"> &nbsp;&nbsp;&nbsp;&nbsp;
+			<br>
+			<input type="submit" name="submit" value="Submit."> <br> </form>
+			<p class="msg">{{message}}</p>
+			<br><br><br><br>
+			<table class="upitems">
+				<tr>
+					<th>Item ID</th>
+					<th>Name</th>
+					<th>Event</th> 
+					<th>Stock</th>
+					<th>Price</th>
+				</tr>
+				{{#each results}}
+				<tr><td>{{this.Item_ID}}</td>
+					<td>{{this.Name}}</td>
+					<td>{{this.Event}}</td>
+					<td>{{this.Stock}}</td>
+					<td>{{this.Price}}</td></tr>
+					{{/each}}
+				</table>
+			</div>

@@ -1,0 +1,33 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="invoice">
+		<p class="enter">Add an Item? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delete an Item?</p>
+		<form action="/invoice" method="POST">
+			<input type="text" placeholder="Item ID*" name="itemid"> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Quantity*" name="qty"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Item ID*" name="id"> &nbsp;&nbsp;&nbsp;&nbsp;
+			<br>
+			<p class="button"><input type="submit" name="submit" value="Submit.">
+				<input type="submit" name="confirm" value="Confirm."></p>
+			</form>
+			<p class="msg">{{message}}</p>
+			<p class="luck"><b>{{luck}}</p>
+				<p class="bod">Order Date:</b> {{ordate}} &nbsp;&nbsp;&nbsp;&nbsp; <b>Due Date:</b> {{duedate}}</p>
+				<table class="upitems">
+					<tr>
+						<th>Item ID</th>
+						<th>Name</th>
+						<th>Quantity</th>
+						<th>Price Per Unit</th>
+						<th>Amount</th>
+					</tr>
+					{{#each result}}
+					<tr><td>{{this.Item_ID}}</td>
+						<td>{{this.Name}}</td>
+						<td>{{this.Quantity}}</td>
+						<td>{{this.Price_Per_Item}}</td>
+						<td>{{this.Amount}}</td></tr>
+						{{/each}}
+					</table>
+					<p class="bod"><b>{{label}}</b> {{amount}}</p>
+				</div>

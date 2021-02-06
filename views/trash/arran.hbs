@@ -1,0 +1,33 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="arran">
+		<p class="enter">Enter the Arrangement details:</p>
+		<form action="/arran" method="POST">
+			<input type="text" placeholder="Name*" name="arrname" required> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Decoration ID*" name="decoid" required> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Quantity*" name="decoqty" required> <br> <br>
+			<input type="text" placeholder="Event*" name="arrevent" required>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" placeholder="Price*" name="arrprice" required><br>
+			<input type="submit" name="submit" value="Submit.">
+			<p class="msg">{{message}}</p> 
+			<br><br><br><br>
+			<table style="width:100% font-family: 'Exo';">
+				<tr>
+					<th>Arrangement ID</th>
+					<th>Name</th> 
+					<th>Decoration ID</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Event</th>
+				</tr>
+				{{#each results}}
+				<tr><td>{{this.Arrangement_ID}}</td>
+					<td>{{this.Name}}</td>
+					<td>{{this.Decoration_ID}}</td>
+					<td>{{this.Quantity}}</td>
+					<td>{{this.Price}}</td>
+					<td>{{this.Event}}</td></tr>
+					{{/each}}
+				</table>
+			</form>
+		</div>

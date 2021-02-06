@@ -1,0 +1,37 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="arran">
+	<form action="/uparran" method="POST">
+	<p>Enter the updated Arrangement details:</p>
+	<input type="text" placeholder="Arrangement ID*" name="id"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" placeholder="Name*" name="arrname"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" placeholder="Decoration ID*" name="decoid"> <br> <br>
+	<input type="text" placeholder="Quantity*" name="decoqty" > &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" placeholder="Event*" name="arrevent" >&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" placeholder="Price*" name="arrprice"><br>
+
+	<p>Enter the Arrangement to be deleted:</p>
+	<input type="text" placeholder="Arrangement ID*" name="arrid"><br><br>
+	<input type="submit" name="submit" value="Submit.">
+	<p class="msg">{{message}}</p>  
+	<br><br><br><br>
+	<table style="width:100% font-family: 'Exo';">
+	<tr>
+	<th>Arrangement ID</th>
+	<th>Name</th> 
+	<th>Decoration ID</th>
+	<th>Quantity</th>
+	<th>Price</th>
+	<th>Event</th>
+	</tr>
+	{{#each results}}
+	<tr><td>{{this.Arrangement_ID}}</td>
+	<td>{{this.Name}}</td>
+	<td>{{this.Decoration_ID}}</td>
+	<td>{{this.Quantity}}</td>
+	<td>{{this.Price}}</td>
+	<td>{{this.Event}}</td></tr>
+	{{/each}}
+	</table>
+	</form>
+	</div>

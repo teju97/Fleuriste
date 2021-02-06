@@ -1,0 +1,13 @@
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="cust">
+		<p class="enter">Enter the Order details:</p>
+		<form action="/order" method="POST">
+			<input type="text" placeholder="Order Date(yyyy-mm-dd)*" name="ordate" required> <br> <br>
+			<input type="text" placeholder="Due Date(yyyy-mm-dd)*" name="duedate" required>
+			<br>
+			<input type="submit" name="submit" value="Next."> <br> </form>
+			<p class="msg">{{message}}</p>
+			<br>
+		</form>
+	</div>
